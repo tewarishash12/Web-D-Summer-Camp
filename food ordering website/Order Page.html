@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        body{
+            background: url(food-delivery-7-sharing1.jpg) no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        div{
+            background-color: rgb(237, 199, 146);
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        .bld{
+            font-weight: bold;
+        }
+        .btn{
+            height: 30px;
+            width: 140px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Order Page</h1>
+        <form action="">
+            <label class="bld" for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter your Name"><br><br>
+
+            <label class="bld" for="no">Mobile:</label>
+            <input type="number" name="no" placeholder="Enter your Mobile"><br><br>
+
+            <label class="bld" for="addr">Address:</label>
+            <input type="email" name="addr" placeholder="Enter your Address"><br><br>
+
+            <label class="bld" for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your Email"><br><br>
+
+            <label class="bld" for="date">Date of Delivery:</label>
+            <input type="date" name="date"><br><br>
+
+            <label class="bld" for="time">Time of Delivery:</label>
+            <input type="time" name="time"><br><br>
+
+            <label class="bld" for="date">Type of food:</label><br>
+                <input type="checkbox"><label for="French">French</label><br>
+                <input type="checkbox"><label for="Chinese">Chinese</label><br>
+                <input type="checkbox"><label for="Continental">Continental</label><br>
+                <input type="checkbox"><label for="Indian">Indian</label><br>
+                <input type="checkbox"><label for="Philipino">Philipino</label><br>
+                <input type="checkbox"><label for="Thai">Thai</label>
+            <br><br>
+
+            <label class="bld" for="suggestions">Any Suggestions:</label>
+            <textarea name="suggestions" placeholder="Any special Requests" id=""></textarea><br><br>
+
+            <input class="btn" type="Submit" value="Submit">
+            <input class="btn" type="reset" value="Reset">
+
+        </form>
+    </div>
+</body>
+</html>
