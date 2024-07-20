@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Form</title>
+    <style>
+        h1,
+        form {
+            margin-top: 50px;
+            padding-left: 50px;
+        }
+        div{
+            margin-top: 50px;
+            border: 2px solid rgb(105, 105, 105);
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px black;
+            height: 500px;
+            width: 600px;
+            display: flex;
+            /* /* align-self: center; */
+            flex-direction: column;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            background-color: rgb(39, 39, 39);
+            color: white;
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Doctor Appointment Heading</h1>
+        <form action="">
+            <label class="bold" for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter you Full Name"><br><br>
+
+            <label class="bold" for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter you Email"><br><br>
+
+            <label class="bold" for="date">Date:</label>
+            <input type="date" name="date" id="date"><br><br>
+
+            <label class="bold" for="time">Time:</label>
+            <input type="time" name="time" id="time"><br><br>
+
+            <label class="bold" for="doctor">Select Doctor:</label>
+            <select name="doctor" id="doctor" value="doctor">
+                <option value="Ortho">Orthopaedic</option>
+                <option value="Derma">Dermatology</option>
+                <option value="Cardio">Cardiology</option>
+                <option value="General">General Physician</option>
+            </select><br><br>
+
+            <label class="bold" for="reason">Reason for Visit:</label>
+            <textarea name="reason" id="reason"></textarea><br><br>
+
+            <input class="btn" type="submit" value="Book Appointment">
+            <input class="btn" type="reset" value="Reset">
+        </form>
+
+    </div>
+</body>
+
+</html>

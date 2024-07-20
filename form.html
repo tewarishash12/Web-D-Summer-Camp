@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <style>
+        h1,
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+        div{
+            border: 2px solid rgb(105, 105, 105);
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px black;
+            height: 500px;
+            width: 400px;
+            margin-left: 500px;
+            margin-top: 80px;
+        }
+        select{
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px rgb(103, 102, 102);
+        }
+        #submit{
+            background-color: rgb(39, 39, 39);
+            color: white;
+            width: 350px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-    <form action="">
-        
-    </form>
+    <div>
+        <h1>My Form</h1>
+        <form action="">
+            <label for="fname" class="bold">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your First Name"><br><br>
+
+            <label for="lname" class="bold">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your Last Name"><br><br>
+
+            <label for="phone" class="bold">Phone No.:</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter your Phone Number"><br><br>
+
+            <label for="email" class="bold">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email-Id"><br><br>
+            
+            <label for="gender" class="bold">Gender:</label>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female">
+            <label for="Female">Female</label>
+            <input type="radio" id="others" name="gender" value="others">
+            <label for="others">Others</label><br><br>
+            
+            <label for="degree" class="bold">Degree:</label>
+            <select name="Degree" id="degree" value="deg">
+                <option value="BTech">B Tech</option>
+                <option value="BBA">BBA</option>
+                <option value="BVoc">BVoc</option>
+                <option value="BCA">BCA</option>
+            </select><br><br>
+
+            <label for="hostel" class="bold">Are you interested in Hostels?</label>
+            <label for="hostel">Yes</label>
+            <input type="checkbox" id="yes" name="yes" value="hostel">
+            <label for="hostel">No</label>
+            <input type="checkbox" id="no" name="no" value="hostel"><br><br>
+
+
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
 </body>
+
 </html>
