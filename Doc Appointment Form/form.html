@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        fieldset{
+            background-color: rgb(200, 199, 199);
+            height: 500px;
+            width: 400px;
+        }
+        legend{
+            background-color: gray;
+        }
+        h2{
+            text-align: center;
+            color: rgb(101, 96, 96);
+        }
+        input{
+            width: 200px;
+            height: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Book An Appointment</legend>
+        <h2 >Doctor Appointment Booking</h2>
+        
+        <label for="name">Name:</label><br>
+        <input type="text" placeholder="Enter your name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" placeholder="Enter your email"><br><br>
+        
+        <label for="date">Date:</label><br>
+        <input type="date" name="date"><br><br>
+        
+        <label for="time">Time:</label><br>
+        <input type="time" name="time"><br><br>
+
+        <label for="doctor">Select Doctor:</label><br>
+        <select name="doctor" id="doc">
+            <option value="" hidden disabled selected>-- Please choose an option --</option>
+            <option value="ortho">Orthopaedic</option>
+            <option value="derma">Dermatology</option>
+            <option value="cardio">Cardiology</option>
+            <option value="genPhy">General Physician</option>
+        </select><br><br>
+        
+        <label for="visit">Reason for Visit:</label><br>
+        <textarea name="visit" id="" placeholder="Explain your problem"></textarea><br><br>
+
+        <input class="btns" type="submit" value="Book Appointment">
+        <input class="btns" type="reset" value="Reset">
+    </fieldset>
+</body>
+</html>

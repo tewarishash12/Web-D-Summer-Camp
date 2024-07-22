@@ -13,7 +13,7 @@
             text-align: center;
         }
         div{
-            background-color: rgb(237, 199, 146);
+            background-color: rgba(237, 199, 146, 0.45);
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
@@ -36,30 +36,33 @@
         <h1>Order Page</h1>
         <form action="">
             <label class="bld" for="name">Name:</label>
-            <input type="text" name="name" placeholder="Enter your Name"><br><br>
+            <input type="text" name="name" placeholder="Enter your Name" required><br><br>
 
             <label class="bld" for="no">Mobile:</label>
-            <input type="number" name="no" placeholder="Enter your Mobile"><br><br>
+            <input type="number" name="no" placeholder="Enter your Mobile" required><br><br>
 
             <label class="bld" for="addr">Address:</label>
-            <input type="email" name="addr" placeholder="Enter your Address"><br><br>
+            <input type="text" name="addr" placeholder="Enter your Address" required><br><br>
 
             <label class="bld" for="email">Email:</label>
-            <input type="email" name="email" placeholder="Enter your Email"><br><br>
+            <input type="email" name="email" placeholder="Enter your Email" required><br><br>
 
             <label class="bld" for="date">Date of Delivery:</label>
-            <input type="date" name="date"><br><br>
+            <input type="date" name="date" required><br><br>
 
             <label class="bld" for="time">Time of Delivery:</label>
-            <input type="time" name="time"><br><br>
-
-            <label class="bld" for="date">Type of food:</label><br>
-                <input type="checkbox"><label for="French">French</label><br>
-                <input type="checkbox"><label for="Chinese">Chinese</label><br>
-                <input type="checkbox"><label for="Continental">Continental</label><br>
-                <input type="checkbox"><label for="Indian">Indian</label><br>
-                <input type="checkbox"><label for="Philipino">Philipino</label><br>
-                <input type="checkbox"><label for="Thai">Thai</label>
+            <input type="time" name="time" required><br><br>
+            
+            <label class="bld" for="time">Type of food:</label>
+            <select name="" id=""><label class="bld" for="date" required>
+                <option value="cuisine" hidden disabled selected>Select your Cuisine</option>
+                <option value="French">French</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Continental">Continental</option>
+                <option value="Indian">Indian</option>
+                <option value="Philipino">Philipino</option>
+                <option value="Thai">Thai</option>
+            </select>
             <br><br>
 
             <label class="bld" for="suggestions">Any Suggestions:</label>
