@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        div{
+            border: 2px solid blue;
+        }
+
+        form{
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <h1>Good Vibes Form</h1>
+
+    <div>
+        <form action="">
+            <h2>Tell us something positive that happened to you today.</h2>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter your name"><br><br>
+
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter your email address"><br><br>
+
+            <label for="">On a scale of 1-10, how good was it?</label>
+            <input type="number" min="1" max="10"><br><br>
+
+            <label for="">Where did it happen</label>
+            <select name="" id="">
+                <option value="home">At home</option>
+                <option value="comm">On my commute</option>
+                <option value="work">At work</option>
+                <option value="street">On the street</option>
+                <option value="others">Others</option>
+            </select><br><br>
+
+            <label for="">At what time of day did it happen?</label><br>
+            <input type="radio" value="Morning">
+            <label for="">Morning</label><br>
+            <input type="radio" value="Afternoon">
+            <label for="">Afternoon</label><br>
+            <input type="radio" value="Evening">
+            <label for="">Evening</label><br><br>
+
+            <label for="">What emotions did you experience?<br>
+                (Select all that apply)</label>
+            <input type="checkbox" value="Excited">
+            <label for="exi">Excited</label><br>
+            <input type="checkbox" value="Humbled">
+            <label for="hum">Humbled</label><br>
+            <input type="checkbox" value="ela">
+            <label for="ela">Elated</label><br>
+            <input type="checkbox" value="lov">
+            <label for="lov">Loved</label><br>
+            <input type="checkbox" value="ent">
+            <label for="ent">Enthusiastic</label><br>
+
+            <label for="">Please describe your positive experience</label>
+            <textarea name="" id="" placeholder="Enter your experience here"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

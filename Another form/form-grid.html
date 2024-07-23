@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form using media queries</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: rgb(136, 252, 252);
+            /* border: 2px solid black; */
+        }
+        form{
+            background-color: rgb(230, 220, 220);
+            width: 50%;
+            height: 80%;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(7, auto);
+        }
+
+        .item {
+            /* background-color: brown; */
+            padding: 5px;
+        }
+
+        #one {
+            text-align: center;
+        }
+        #one>input{
+            background-color: rgb(78, 237, 195);
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+        }
+        .item1{
+            text-align: right;
+        }
+        .item2{
+            text-align: left;
+        }
+    </style>
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Good Vibes Form</h1>
+    <form action="">
+        <h2 style="text-align: center;">Tell us something positive that happened to you today.</h2>
+        <div class="container">
+            <div class="item item1">
+                <label for="">Name</label>
+            </div>
+            <div class="item item2">
+                <input type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="item item1">
+                <label for="">Email</label>
+            </div>
+            <div class="item item2">
+                <input type="email" placeholder="Enter your email address">
+            </div>
+
+            <div class="item item1">
+                <label for="">On a scale of 1-10, how good was it?</label>
+            </div>
+            <div class="item item2">
+                <input type="number" min="1" max="10">
+            </div>
+
+            <div class="item item1">
+                <label for="">Where did it happen</label>
+            </div>
+            <div class="item item2">
+                <select name="" id="">
+                    <option value="home">At home</option>
+                    <option value="comm">On my commute</option>
+                    <option value="work">At work</option>
+                    <option value="street">On the street</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="item item1">
+                <label for="">At what time of day did it happen?</label>
+            </div>
+            <div class="item item2">
+                <input type="radio" value="Morning">
+                <label for="">Morning</label><br>
+                <input type="radio" value="Afternoon">
+                <label for="">Afternoon</label><br>
+                <input type="radio" value="Evening">
+                <label for="">Evening</label>
+            </div>
+
+            <div class="item item1">
+                <label for="">What emotions did you experience?<br>
+                    (Select all that apply)</label>
+            </div>
+            <div class="item item2">
+                <input type="checkbox" value="Excited">
+                <label for="exi">Excited</label><br>
+                <input type="checkbox" value="Humbled">
+                <label for="hum">Humbled</label><br>
+                <input type="checkbox" value="ela">
+                <label for="ela">Elated</label><br>
+                <input type="checkbox" value="lov">
+                <label for="lov">Loved</label><br>
+                <input type="checkbox" value="ent">
+                <label for="ent">Enthusiastic</label>
+            </div>
+            <div class="item item1">
+                <label for="">Please describe your positive experience</label>
+            </div>
+            <div class="item item2">
+                <textarea name="" id="" placeholder="Enter your experience here"></textarea>
+            </div>
+        </div>
+
+        <div id="one">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

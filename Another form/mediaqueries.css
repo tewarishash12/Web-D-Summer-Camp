@@ -1,0 +1,26 @@
+@media (max-width: 630px) {
+    h2{
+        font-size: 20px;
+    }
+    form {
+        margin-top: 200px;
+        background-color: rgb(230, 220, 220); 
+        height: fit-content;    
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 10% 5% 10% 10% 10% 5% 10% 10% 15% 13% 22% 10% 20%;
+        padding-left: 10px;
+    }
+    .item{
+        padding: 0px;
+        text-align: left;
+    }
+    #one{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 40vh;
+    }
+}
