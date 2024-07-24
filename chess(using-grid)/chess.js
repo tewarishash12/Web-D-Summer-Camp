@@ -16,6 +16,7 @@ body.style.backgroundSize = "cover";
 
 chessBoard.style.display='grid';
 chessBoard.style.gridTemplateColumns = 'repeat(8, 50px)';
+chessBoard.style.gridTemplateRows = 'repeat(8, 50px)';
 chessBoard.style.height = "400px";
 chessBoard.style.width = "400px";
 let count=0;
@@ -27,7 +28,7 @@ for(let i=0;i<8;i++){
         square.style.display = 'flex';
         square.style.justifyContent = "center";
         square.style.alignItems = "center";
-        square.style.border = "2px solid black"
+        square.style.border = "2px solid black";
         if((i+j)%2===0){
             square.classList.add('white');
             square.style.backgroundColor = 'rgb(177,228,185)';
