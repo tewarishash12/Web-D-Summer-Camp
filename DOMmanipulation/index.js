@@ -28,7 +28,7 @@ container.appendChild(green);
 const yellow = document.createElement('div');
 yellow.className = "color";
 yellow.style.backgroundColor = "yellow";
-black.classList.add('yellow');
+black.classList.add('yellow');   
 container.appendChild(yellow);
 
 let colors = document.querySelectorAll('.color');
