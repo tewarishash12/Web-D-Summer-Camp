@@ -6,7 +6,6 @@ body.style.justifyContent = "center";
 body.style.alignItems = "center";
 body.style.flexDirection = "column-reverse";
 
-
 const answers = document.createElement('div');
 body.appendChild(answers);
 
@@ -26,7 +25,6 @@ container.style.gridTemplateColumns = "repeat(4, 70px)";
 container.style.gridTemplateRows = "repeat(5, 70px)";
 container.style.gap= "10px";
 container.style.backgroundColor = "white";
-
 
 for(let i=0;i<5;i++){
     for(let j=0;j<4;j++){
