@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .weather-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <!-- http://127.0.0.1:3000/course/D13/practice/2_weather_app.html?city=London
+      -->
+    <form id="weather-form">
+        <label for="city">Enter city name:</label>
+        <input type="text" id="city" name="city" required />
+        <button type="submit">Get Weather</button>
+    </form>
+    <div class="weather-info" id="weather-info"></div>
+
+
+
+
+    <script>
+        // Q: get reference to the form
+        const formElem = document.querySelector("#weather-form");
+
+        // Q: add event listener for submit event
+        formElem.addEventListener("submit", getInputAndPrintTemp);
+
+        function getInputAndPrintTemp(event) {
+            event.preventDefault();
+            const cityInput = document.querySelector("#city");
+            const city = cityInput.value;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5aad59a746bec23d65194d32609c2639&units=metric%60`
+            console.log(url)
+
+            getWeather(url);
+        }
+
+
+
+        async function getWeather(url) {
+            const responseVar = await fetch(url);
+            const jsonData = await responseVar.json();
+            const main = jsonData.main;
+            const temp = main.temp;
+
+            const divElem = document.querySelector(".weather-info");
+            divElem.textContent = temp;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

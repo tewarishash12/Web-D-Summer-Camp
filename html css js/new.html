@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .weather-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <form id="weather-form">
+        <label for="city">Enter city name:</label>
+        <input type="text" id="city" name="city" required />
+        <button type="submit">Get Weather</button>
+    </form>
+    <div class="weather-info" id="weather-info"></div>
+
+    <script>
+        const input = document.getElementById('city');
+
+        const API_KEY = `083a080e5f21214c8e5e9042afa51958`;
+
+        const city_name = input.value;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`;
+
+        function dummy(responseObject){
+            console.log("Successful call");
+        }
+        function failedPromise(){
+            console.log("Unsuccessful call");
+        }
+
+        async function weather(){
+            const call = await fetch(url);
+            console.log(call);
+            
+            const jsonD = await call.json();
+            console.log(jsonD);
+            const main = jsonD.main;
+            const temp = main.temp;
+            console.log(temp);
+            const wea = document.getElementById('weather-info');
+            wea.innerHTML = temp;
+        }
+        weather();
+
+
+        const form = document.querySelector('#weather-form');
+
+
+    </script>
+</body>
+
+</html>

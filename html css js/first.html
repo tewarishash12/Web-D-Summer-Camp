@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled HTML Structure</title>
+    <style>
+        body {
+            background-color: rgb(206, 224, 239);
+        }
+
+        .container {
+            border: 1px solid #b6b5b5;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .title {
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        .text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .highlight {
+            background-color: #ff0;
+            padding: 2px 4px;
+        }
+
+        .list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .list-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-div" class="container">
+        <h1 class="title">Main Title</h1>
+        <p class="text">This is a paragraph inside the first div.</p>
+        <span class="highlight">This is a span inside the first div.</span>
+    </div>
+
+    <div id="sub-div" class="container">
+        <h2 class="title">Sub Title</h2>
+        <p class="text">This is another paragraph inside the second div.</p>
+        <span class="highlight">This is another span inside the second div.</span>
+    </div>
+
+    <div id="list-div" class="container">
+        <h3 class="title">Another Section</h3>
+        <ul id="item-list" class="list">
+            <li class="list-item">List item 1</li>
+            <li class="list-item">List item 2</li>
+            <li class="list-item">List item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        const body = document.body;
+        // Q: select the first div and change its background color to light blue
+        const div1 = document.body.firstElementChild;
+        div1.style.backgroundColor = "skyblue";
+        // Q: select the second div and change its background color to light green
+        const div2 = body.children[1];
+        div2.style.backgroundColor = "lightgreen";
+        // Q: select the third div and change its background color to light yellow
+        const div3 = body.children[2];
+        div3.style.backgroundColor = "lightyellow";
+        // Q: select the first div title and change its font size to 20px
+        const sub1 = div1.firstElementChild;
+        sub1.style.fontSize = "20px";
+        // Q: select the second div title and change its font size to 20px
+        const sub2 = div2.firstElementChild;
+        sub2.style.fontSize = "20px";
+        // Q: select the third div title and change its font size to 20px
+        const sub3 = div3.firstElementChild;
+        sub3.style.fontSize = "20px";
+        // Q: select the first div text and change its font size to 16px
+        const notF = document.querySelectorAll('.container > :not(:first-child)');
+        console.log(notF);
+        notF.style.fontSize = "160px"
+        // Q: select the second div text and change its font size to 16px
+        // Q: select the third div text and change its font size to 16px
+
+
+        
+    </script>
+</body>
+</html>

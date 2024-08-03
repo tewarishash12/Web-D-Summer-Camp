@@ -116,3 +116,4 @@ const cubedOdd = arr1.filter((item)=>{
 });
 
 console.log(cubedOdd)
+

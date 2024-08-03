@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getWeather(){
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=zurich&units=metric&appid=cfe7ae772e45b97e547d93639fe2a0c4`;
+
+            try {
+                const responseVar = await fetch(url);
+                console.log(responseVar);
+                const jsonData = await responseVar.json();
+                const main = jsonData.main;
+                const temp = main.temp;
+                
+                console.log(temp);
+            }catch(err){
+                console.log("Error occured")
+                console.log(err);
+                console.log(typeof err);
+                console.log(err.name);
+                console.log(err.message);
+            }
+        }
+        getWeather();
+    </script>
+</body>
+</html>
