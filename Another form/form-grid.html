@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form using media queries</title>
     <style>
-        body{
+        body {
             height: 100vh;
             background-color: rgb(136, 252, 252);
             /* border: 2px solid black; */
         }
-        form{
+
+        form {
             background-color: rgb(230, 220, 220);
             width: 50%;
             height: 80%;
@@ -21,6 +22,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -35,17 +37,20 @@
         #one {
             text-align: center;
         }
-        #one>input{
+
+        #one>input {
             background-color: rgb(78, 237, 195);
             width: 100px;
             height: 40px;
             border-radius: 10px;
             border: none;
         }
-        .item1{
+
+        .item1 {
             text-align: right;
         }
-        .item2{
+
+        .item2 {
             text-align: left;
         }
     </style>
@@ -54,35 +59,35 @@
 
 <body>
     <h1 style="text-align: center;">Good Vibes Form</h1>
-    <form action="">
+    <form action="" onsubmit="return validateForm();">
         <h2 style="text-align: center;">Tell us something positive that happened to you today.</h2>
         <div class="container">
             <div class="item item1">
-                <label for="">Name</label>
+                <label for="name">Name</label>
             </div>
             <div class="item item2">
-                <input type="text" placeholder="Enter your name">
+                <input id="name" type="text" placeholder="Enter your name">
             </div>
 
             <div class="item item1">
-                <label for="">Email</label>
+                <label for="email">Email</label>
             </div>
             <div class="item item2">
-                <input type="email" placeholder="Enter your email address">
+                <input id="email" type="email" placeholder="Enter your email address">
             </div>
 
             <div class="item item1">
-                <label for="">On a scale of 1-10, how good was it?</label>
+                <label for="rating">On a scale of 1-10, how good was it?</label>
             </div>
             <div class="item item2">
-                <input type="number" min="1" max="10">
+                <input id="rating" type="number" min="1" max="10">
             </div>
 
             <div class="item item1">
-                <label for="">Where did it happen</label>
+                <label for="location">Where did it happen</label>
             </div>
             <div class="item item2">
-                <select name="" id="">
+                <select id="location">
                     <option value="home">At home</option>
                     <option value="comm">On my commute</option>
                     <option value="work">At work</option>
@@ -92,38 +97,38 @@
             </div>
 
             <div class="item item1">
-                <label for="">At what time of day did it happen?</label>
+                <label>At what time of day did it happen?</label>
             </div>
             <div class="item item2">
-                <input type="radio" name="Time">
-                <label for="">Morning</label><br>
-                <input type="radio" name="Time">
-                <label for="">Afternoon</label><br>
-                <input type="radio" name="Time">
-                <label for="">Evening</label>
+                <input type="radio" name="Time" id="timeMorning">
+                <label for="timeMorning">Morning</label><br>
+                <input type="radio" name="Time" id="timeAfternoon">
+                <label for="timeAfternoon">Afternoon</label><br>
+                <input type="radio" name="Time" id="timeEvening">
+                <label for="timeEvening">Evening</label>
             </div>
 
             <div class="item item1">
-                <label for="">What emotions did you experience?<br>
+                <label>What emotions did you experience?<br>
                     (Select all that apply)</label>
             </div>
             <div class="item item2">
-                <input type="checkbox" value="Excited">
-                <label for="exi">Excited</label><br>
-                <input type="checkbox" value="Humbled">
-                <label for="hum">Humbled</label><br>
-                <input type="checkbox" value="ela">
-                <label for="ela">Elated</label><br>
-                <input type="checkbox" value="lov">
-                <label for="lov">Loved</label><br>
-                <input type="checkbox" value="ent">
-                <label for="ent">Enthusiastic</label>
+                <input type="checkbox" value="Excited" id="emotionExcited">
+                <label for="emotionExcited">Excited</label><br>
+                <input type="checkbox" value="Humbled" id="emotionHumbled">
+                <label for="emotionHumbled">Humbled</label><br>
+                <input type="checkbox" value="Ela" id="emotionElated">
+                <label for="emotionElated">Elated</label><br>
+                <input type="checkbox" value="Lov" id="emotionLoved">
+                <label for="emotionLoved">Loved</label><br>
+                <input type="checkbox" value="Ent" id="emotionEnthusiastic">
+                <label for="emotionEnthusiastic">Enthusiastic</label>
             </div>
             <div class="item item1">
-                <label for="">Please describe your positive experience</label>
+                <label for="experience">Please describe your positive experience</label>
             </div>
             <div class="item item2">
-                <textarea name="" id="" placeholder="Enter your experience here"></textarea>
+                <textarea id="experience" placeholder="Enter your experience here"></textarea>
             </div>
         </div>
 
@@ -131,6 +136,8 @@
             <input type="submit" value="Submit">
         </div>
     </form>
+
+    <script src="form.js"></script>
 </body>
 
 </html>
