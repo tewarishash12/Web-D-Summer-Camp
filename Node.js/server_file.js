@@ -18,7 +18,7 @@ server.get('/blog', (req,res)=>{
 })
 
 server.get('/newblog', (req,res)=>{
-    res.sendFile(path.join(__dirname, "../HTML_files/newblog.html"));
+    res.redirect('/about');
 })
 
 server.use('/error', (req,res)=>{
