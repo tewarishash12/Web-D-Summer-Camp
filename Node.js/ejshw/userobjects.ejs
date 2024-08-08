@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('partials/header_style') %>
+    <%- include('partials/footer_style') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <table border="1" style="border-collapse: collapse;">
+        <% people.forEach(data =>{ %>
+            <tr> 
+                <td><%=  data.name %> </td>
+                <td><%=  data.age %> </td>
+            </tr>
+        <% }); %>
+    </table>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

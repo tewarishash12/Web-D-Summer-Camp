@@ -44,3 +44,4 @@ server.get('/blogpage', (req,res)=>{
 server.get('/newblog', (req,res)=>{
     res.render('newblog',{title: 'NEW BLOG'})
 });
+
