@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS | Students</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/students">Students</a></li>
+      </ul>
+    </nav>
+
+    <h2>This is the header of the students page</h2>
+    <p>This is a paragraph in the html template from node backend</p>
+
+    <% if(students.length>0){ %>
+    <ul>
+    <% students.forEach(student =>{ %>
+        <li><%= student %> </li>
+    <% }); %>
+    </ul>
+    <% } else { %>
+        <%= "Students not found" %>
+    <% } %>
+  </body>
+</html>

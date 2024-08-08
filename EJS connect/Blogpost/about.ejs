@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+
+            h1,
+            h2 {
+                text-align: center;
+            }
+
+            /* About page specific styles */
+            .about-blogs,
+            .about-owner {
+                margin-bottom: 20px;
+            }
+
+            .about-blogs ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            .about-blogs li {
+                margin-bottom: 10px;
+            }
+
+            .about-owner p {
+                text-align: justify;
+                line-height: 1.6;
+            }
+
+            .about-owner a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+
+            .about-owner a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        <%- include('partials/nav_style') %>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <div class="container">
+        <h1>About Us</h1>
+        <section class="about-blogs">
+            <h2>Types of Blogs We Write</h2>
+            <p>Our website features a variety of blogs that cover diverse topics including:</p>
+            <ul>
+                <li>Technology and Innovations</li>
+                <li>Health and Wellness</li>
+                <li>Travel and Adventure</li>
+                <li>Food and Recipes</li>
+                <li>Personal Development</li>
+            </ul>
+        </section>
+        <section class="about-owner">
+            <h2>About the Website Owner</h2>
+            <p>Hello! I'm [Owner's Name], the creator and curator of this blog. With a passion for [Owner's Passion], I
+                aim to share insightful and engaging content with my readers. Whether it's exploring the latest in tech
+                or sharing delicious recipes, I strive to provide valuable information and inspiration through my
+                writing.</p>
+            <p>Feel free to reach out to me through the <a href="contact.html">Contact</a> page for any inquiries or
+                collaborations.</p>
+        </section>
+    </div>
+</body>
+
+</html>
