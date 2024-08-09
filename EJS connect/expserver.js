@@ -27,7 +27,7 @@ const filePath3 = 'C:/Users/tewar/Desktop/Web D Summer Camp/EJS connect/Blogpost
 const filePath4 = 'C:/Users/tewar/Desktop/Web D Summer Camp/EJS connect/Blogpost/Blogpages/blogpage4.ejs';
 const filePath5 = 'C:/Users/tewar/Desktop/Web D Summer Camp/EJS connect/Blogpost/Blogpages/blogpage5.ejs';
 
-let arrPath = [filePath1, filePath2, filePath3, filePath4, filePath5]
+let arrPath = [filePath1, filePath2, filePath3, filePath4, filePath5];
 
 
 server.get('/blogpage', (req,res)=>{
