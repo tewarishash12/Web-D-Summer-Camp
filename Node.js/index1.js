@@ -2,18 +2,12 @@ const express = require('express');
 const ejs = require('ejs');
 const server = express();
 
-const morgan = require("morgan");
-
 server.set('view engine', 'ejs');
 server.set('views', 'views');
 
 server.listen(3000);
 
 server.use(express.static('public'));
-
-// server.set(morgan('dev')); 
-// 
-// server.use('favicon')
 
 server.get('/', (req,res)=>{
     res.render('about', {title: 'ABOUT'});

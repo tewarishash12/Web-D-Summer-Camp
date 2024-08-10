@@ -1,6 +1,5 @@
 const express = require('express');
 const server = express();
-
 const path = require('path');
 
 server.listen(3000);
@@ -21,6 +20,6 @@ server.get('/newblog', (req,res)=>{
     res.redirect('/about');
 })
 
-server.use('/error', (req,res)=>{
+server.use((req,res)=>{
     res.sendFile(path.join(__dirname, "../HTML_files/error.html"));
 })
