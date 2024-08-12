@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+
+    <h2>This is the students page</h2>
+    <p>This page should have information about the students....</p>
+
+    <% if (students.length > 0) { %>
+      <ul>
+        <% students.forEach(function(student) { %>
+          <li><%= student.name %></li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No students found</p>
+    <% } %>
+
+  </body>
+</html>
+

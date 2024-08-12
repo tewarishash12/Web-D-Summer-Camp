@@ -1,0 +1,16 @@
+{
+  "name": "d20",
+  "version": "1.0.0",
+  "main": "7_express_middleware.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}

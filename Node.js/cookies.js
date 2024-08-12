@@ -20,3 +20,8 @@ server.get('/seeCookie', (req,res)=>{
     const fname = req.cookies.fname;
     res.send(fname);
 })
+
+
+server.use('/favicon.ico', (req,res)=>{
+    res.sendStatus(204).end();
+})
