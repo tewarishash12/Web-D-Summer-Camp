@@ -82,5 +82,33 @@ app.get('/student/query', (req,res)=>{
     console.log(keyFromQueryParam);
     const nameParam = getStudentByName(keyFromQueryParam);
     res.send(nameParam);
-})
+});
 
+// {id: 1, name:"John", age: 20}
+// 1. create function that creates a new student
+function addStudent(student){
+    students.push(student);
+}
+
+// 2. Create a POST API which reads the body and console.log it
+app.use(express.json());
+app.post('/student',(req,res)=>{
+    const obj = req.body;
+    console.log(obj);
+    addStudent(obj);
+    res.send('The data has been send');
+});
+
+function deleteStudentById(id){
+    const index = students.findIndex(s=> s.id==id);
+    if(index ==-1)
+        return;
+    students.splice(index,1);
+}
+
+app.delete('/students/id/:id', (req,res)=>{
+    const id = req.params.id;
+    const intId = parseInt(id);
+    deleteStudentById(intId);
+    res.send(`The student with ${intId} has been deleted`);
+})
