@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

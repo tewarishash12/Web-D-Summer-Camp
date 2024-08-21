@@ -1,9 +1,9 @@
 {
   "name": "d20",
   "version": "1.0.0",
-  "main": "7_express_middleware.js",
+  "main": "mongoIntro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ls"
   },
   "author": "",
   "license": "ISC",
@@ -11,6 +11,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "mongoose": "^8.5.2",
     "morgan": "^1.10.0"
   }
 }
