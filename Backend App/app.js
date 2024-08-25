@@ -12,6 +12,7 @@ const DB_NAME = 'blogsData'
 const DB_URI =`mongodb+srv://${USER_NAME}:${PASSWORD}@merncluster0.fq4t0.mongodb.net/${DB_NAME}?retryWrites=true&w=majority&appName=mernCluster0`;
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(DB_URI)
 .then((result)=>{
@@ -28,5 +29,6 @@ app.use(cors());
 app.get('/', (req, res)=>{
     res.send('Home Page');
 })
+
 
 app.use('/blogs', blogRoutes);

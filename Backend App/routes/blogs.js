@@ -44,8 +44,9 @@ router.post('/', async(req,res)=>{
 })
 
 router.delete('/:id', async(req,res)=>{
+    console.log("Delete")
     try{
-        const blog = await BlogPost.findById(req.params.id);
+        const blog = await BlogPost.findByIdAndDelete(req.params.id);
         if(!blog)
             return res.status(404).json({message:"Blog is not present"});
     }
